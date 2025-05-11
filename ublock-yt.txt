@@ -1,0 +1,106 @@
+! Title: ublock-yt
+! Expires: 7 days
+! Description: 
+! License: 
+! Homepage: 
+! Forums: 
+
+! ========== YOUTUBE: Согласие (Consent) ==========
+! Отключение всплывающих окон согласия
+youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer.forceConsent, false)
+youtube.com##+js(json-prune, [].response.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer)
+youtube.com##+js(json-prune, topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer)
+
+! 2021-12-01 — Перенаправление на страницу согласия
+youtube.com##+js(set, ytInitialData.onResponseReceivedEndpoints, undefined)
+
+! 2021-12-14 — Согласие v2
+youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
+youtube.com##+js(json-prune, [].response.overlay.consentBumpV2Renderer topbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer overlay.consentBumpV2Renderer response.overlay.consentBumpV2Renderer)
+
+! 2022-10-16 — Shorts → Согласие
+youtube.com##+js(set, ytInitialData.desktopTopbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
+
+! ========== YOUTUBE: Всплывающее окно входа ==========
+youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer.isVisible, false)
+youtube.com##+js(set, ytInitialData.overlay.upsellDialogRenderer.isVisible, false)
+youtube.com##+js(json-prune, [].playerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer)
+
+! ========== YOUTUBE: Shorts ==========
+! Главная страница, подписки, поиск
+youtube.com##[is-shorts]
+www.youtube.com###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
+www.youtube.com##ytd-search ytd-video-renderer:has([overlay-style="SHORTS"])
+www.youtube.com##ytd-reel-shelf-renderer
+www.youtube.com##[tab-title="Shorts"]
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer:has([overlay-style="SHORTS"])
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer:has([overlay-style="SHORTS"])
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has([overlay-style="SHORTS"])
+www.youtube.com###related ytd-compact-video-renderer:has([overlay-style="SHORTS"])
+
+! Мобильная версия
+m.youtube.com##ytm-pivot-bar-item-renderer:has(>.pivot-shorts)
+m.youtube.com##ytm-reel-shelf-renderer
+m.youtube.com##ytm-rich-section-renderer:has([d^="M17.77,10.32l-1.2"])
+m.youtube.com##ytm-search ytm-video-with-context-renderer:has([data-style="SHORTS"])
+m.youtube.com##[tab-title="Shorts"]
+
+! ========== YOUTUBE: Удаление "Миксов" ==========
+youtube.com##ytd-rich-item-renderer:has([href$="start_radio=1"])
+youtube.com##ytd-compact-radio-renderer
+youtube.com###related yt-lockup-view-model:has([href*="&start_radio=1&"])
+youtube.com##ytd-radio-renderer
+youtube.com##ytd-search yt-lockup-view-model:has([href$="&start_radio=1"][aria-label])
+youtube.com##.ytp-videowall-still[data-is-mix="true"]
+
+! Удаление "YouTube Music" плейлистов
+youtube.com##ytd-compact-playlist-renderer:has([title^="YouTube"])
+
+! ========== YOUTUBE: Трансляции ==========
+www.youtube.com##:is(ytd-rich-item-renderer,ytd-grid-video-renderer,ytd-compact-video-renderer,ytd-item-section-renderer):has(.badge-style-type-live-now-alternate)
+www.youtube.com##:is(ytd-rich-item-renderer,ytd-grid-video-renderer,ytd-compact-video-renderer,ytd-item-section-renderer):has([aria-label~="Streamed"])
+
+! ========== YOUTUBE: Посты ==========
+www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer:has(ytd-rich-item-renderer[is-post])
+www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-item-renderer[is-post]
+
+! ========== YOUTUBE: Поиск ==========
+! Только видео (без Shorts)
+youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-renderer,yt-showing-results-for-renderer,[icon-name="promo-full-height:EMPTY_SEARCH"]),ytd-video-renderer:has([aria-label="Shorts"])),ytd-secondary-search-container-renderer
+
+! Видео и каналы
+youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-renderer,ytd-channel-renderer,yt-showing-results-for-renderer,[icon-name="promo-full-height:EMPTY_SEARCH"]),ytd-video-renderer:has([aria-label="Shorts"])),ytd-secondary-search-container-renderer
+
+! Видео, каналы и плейлисты
+youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-renderer,ytd-channel-renderer,ytd-playlist-renderer,yt-lockup-view-model,yt-showing-results-for-renderer,[icon-name="promo-full-height:EMPTY_SEARCH"]),ytd-video-renderer:has([aria-label="Shorts"])),ytd-secondary-search-container-renderer
+
+! ========== YOUTUBE: Главная страница ==========
+! Переместить заглушки вниз
+www.youtube.com##ytd-browse[page-subtype="home"] :is(ytd-rich-grid-row, #contents.ytd-rich-grid-row):style(display: contents !important)
+! Починка сетки
+www.youtube.com##ytd-rich-item-renderer[rendered-from-rich-grid][is-in-first-column]:style(margin-left: calc(var(--ytd-rich-grid-item-margin)/2) !important)
+www.youtube.com##ytd-rich-grid-renderer>#contents:style(margin-left: calc(var(--ytd-rich-grid-gutter-margin)) !important)
+www.youtube.com###content.ytd-rich-section-renderer:style(margin-left: calc(var(--ytd-rich-grid-item-margin)/2) !important; margin-right: calc(var(--ytd-rich-grid-item-margin)*2.5) !important;)
+
+! ========== YOUTUBE: Прочее ==========
+youtube.com##.ytp-button.ytp-cards-button
+youtube.com##.ytp-button.branding-img-container
+youtube.com##.ytp-suggested-action
+youtube.com##.ytp-quality-menu .ytp-menuitem:has(.ytp-premium-label)
+youtube.com##ytd-popup-container > tp-yt-paper-dialog > ytd-mealbar-promo-renderer, ytd-popup-container > tp-yt-paper-dialog > yt-mealbar-promo-renderer:has-text(/Claim Offer|Join now|Not Now|No thanks|YouTube TV|live TV|Live TV|movies|sports|Try it free|unlimited DVR|watch NFL/)
+youtube.com##.ytp-pause-overlay, .show-video-thumbnail-button
+~youtube-nocookie.com,~youtube.com##iframe ~ #topvbar > #rvid
+
+! ========== YOUTUBE: Новые элементы ==========
+! 16 марта 2025
+www.youtube.com##.undefined > yt-button-shape > .yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal.yt-spec-button-shape-next
+www.youtube.com##.ytp-button.ytp-miniplayer-button
+
+! 17 марта 2025
+www.youtube.com##.undefined > yt-button-shape
+
+! 23 апреля 2025
+www.youtube.com###attached-survey
+
+! 11 мая 2025
+www.youtube.com##yt-button-shape > .yt-spec-button-shape-next--enable-backdrop-filter-experiment.yt-spec-button-shape-next--icon-leading.yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal.yt-spec-button-shape-next
