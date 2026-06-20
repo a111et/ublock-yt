@@ -30,10 +30,10 @@ This repository contains a curated collection of custom **uBlock Origin** rules 
 ### Option 1: Automatic Subscription (Recommended)
 Click the badge below to automatically import and subscribe to the filter list in uBlock Origin:
 
-[![Subscribe to Filter List](https://img.shields.io/badge/Click%20to%20Subscribe-uBlock%20Origin-red?style=for-the-badge&logo=ublockorigin)](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/a111et/ublock-yt/refs/heads/main/ublock-yt.txt&title=uBlock-YT%20Filters)
+[![Subscribe to Filter List](https://img.shields.io/badge/Click%20to%20Subscribe-uBlock%20Origin-red?style=for-the-badge&logo=ublockorigin)](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2Fa111et%2Fublock-yt%2Frefs%2Fheads%2Fmain%2Fublock-YT-Clinin.txt&title=uBlock-YT+Filters)
 
 ### Option 2: Manual Import
-1. Copy the raw filter link: `https://raw.githubusercontent.com/a111et/ublock-yt/refs/heads/main/ublock-yt.txt`
+1. Copy the raw filter link: `https://raw.githubusercontent.com/a111et/ublock-yt/refs/heads/main/ublock-YT-Clinin.txt`
 2. Open **uBlock Origin Dashboard** -> **Filter lists** tab.
 3. Scroll down to the bottom, check **Import...**, paste the link, and click **Apply changes**.
 
