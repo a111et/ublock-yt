@@ -61,8 +61,6 @@ www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-item-renderer[is-post]
 ! === Clean Video Player UI (Below Player Buttons) ===
 ! YT - Below the Player Buttons - Join
 www.youtube.com###top-row.ytd-watch-metadata #sponsor-button
-! YT - Below the Player Buttons - Subscribe
-www.youtube.com###top-row.ytd-watch-metadata #subscribe-button
 ! YT - Below the Player Buttons - Like/Dislike
 www.youtube.com###top-row.ytd-watch-metadata .ytSegmentedLikeDislikeButtonViewModelHost
 ! YT - Below the Player Buttons - Like
