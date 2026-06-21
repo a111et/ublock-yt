@@ -129,8 +129,6 @@ Cleans up the cluttered row of buttons beneath the video player (Join, Thanks, C
 ```adblock
 ! YT - Below the Player Buttons - Join
 [www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata #sponsor-button
-! YT - Below the Player Buttons - Subscribe
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata #subscribe-button
 ! YT - Below the Player Buttons - Like/Dislike
 [www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata .ytSegmentedLikeDislikeButtonViewModelHost
     ! YT - Below the Player Buttons - Like
