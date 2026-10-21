@@ -76,23 +76,23 @@ youtube.com##ytd-rich-section-renderer.style-scope.ytd-rich-grid-renderer
 ! YT - Главная страница и Подписки (Сетка) - Скрыть раздел Shorts
 youtube.com##[is-shorts]
 ! YT - Меню - Скрыть кнопку Shorts
-[www.youtube.com](https://www.youtube.com)###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
+youtube.com###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
 ! YT - Поиск - Скрыть Shorts
-[www.youtube.com](https://www.youtube.com)##ytd-search ytd-video-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
+youtube.com##ytd-search ytd-video-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
 ! YT - Поиск, Каналы, Подписки (Список) и Боковая панель / Рекомендации под плеером - Скрыть разделы Shorts
-[www.youtube.com](https://www.youtube.com)##ytd-reel-shelf-renderer
+youtube.com##ytd-reel-shelf-renderer
 ! YT - Каналы - Скрыть вкладку Shorts
-[www.youtube.com](https://www.youtube.com)##[tab-title="Shorts"]
+youtube.com##[tab-title="Shorts"]
 ! YT - Подписки - Скрыть Shorts (Сетка)
-[www.youtube.com](https://www.youtube.com)##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
+youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
 ! YT - Подписки - Скрыть Shorts (Список)
-[www.youtube.com](https://www.youtube.com)##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
+youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
 ! YT - Подписки - Новый макет - Скрыть Shorts
-[www.youtube.com](https://www.youtube.com)##ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
+youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
 ! YT - Боковая панель - Скрыть Shorts
-[www.youtube.com](https://www.youtube.com)###related :is(ytd-compact-video-renderer,yt-lockup-view-model):has([overlay-style="SHORTS"],[href^="/shorts/"])
+youtube.com###related :is(ytd-compact-video-renderer,yt-lockup-view-model):has([overlay-style="SHORTS"],[href^="/shorts/"])
 ! YT - История - Скрыть Shorts
-[www.youtube.com](https://www.youtube.com)##ytd-item-section-renderer[page-subtype]:has(>#contents>[is-history]>#dismissible>ytd-thumbnail>#thumbnail[href^="/shorts/"])
+youtube.com##ytd-item-section-renderer[page-subtype]:has(>#contents>[is-history]>#dismissible>ytd-thumbnail>#thumbnail[href^="/shorts/"])
 
 ! YT Mobile - Скрыть кнопку меню Shorts
 m.youtube.com##ytm-pivot-bar-item-renderer:has(>.pivot-shorts)
@@ -113,9 +113,9 @@ m.youtube.com##[tab-identifier="FEhistory"] ytm-compact-video-renderer:has(>div>
 
 ```adblock
 ! YT Главная страница - Скрыть раздел публикаций
-[www.youtube.com](https://www.youtube.com)##ytd-browse[page-subtype="home"] ytd-rich-section-renderer:has(ytd-rich-item-renderer[is-post])
+youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer:has(ytd-rich-item-renderer[is-post])
 ! YT Главная страница - Скрыть публикации
-[www.youtube.com](https://www.youtube.com)##ytd-browse[page-subtype="home"] ytd-rich-item-renderer[is-post]
+youtube.com##ytd-browse[page-subtype="home"] ytd-rich-item-renderer[is-post]
 
 ```
 
@@ -125,27 +125,27 @@ m.youtube.com##[tab-identifier="FEhistory"] ytm-compact-video-renderer:has(>div>
 
 ```adblock
 ! YT - Кнопки под плеером - Спросить
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Ask"])
+youtube.com###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Ask"])
 ! YT - Кнопки под плеером - Спасибо
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Thanks"])
+youtube.com###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Thanks"])
 ! YT - Кнопки под плеером - Поделиться
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Share"])
+youtube.com###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Share"])
 ! YT - Кнопки под плеером - Скачать
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata ytd-download-button-renderer
+youtube.com###top-row.ytd-watch-metadata ytd-download-button-renderer
 ! YT - Кнопки под плеером - Клип
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Clip"])
+youtube.com###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Clip"])
 ! YT - Кнопки под плеером - Еще
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata [aria-label="More actions"]
+youtube.com###top-row.ytd-watch-metadata [aria-label="More actions"]
     ! YT - Кнопки под плеером - Еще: Спросить
-    [www.youtube.com](https://www.youtube.com)##ytd-menu-service-item-renderer:has([d^="M480-80q0-83-31.5-156T363-363q-54-54-127-85.5T80-480q83"])
+    youtube.com##ytd-menu-service-item-renderer:has([d^="M480-80q0-83-31.5-156T363-363q-54-54-127-85.5T80-480q83"])
     ! YT - Кнопки под плеером - Еще: Спасибо
-    [www.youtube.com](https://www.youtube.com)##ytd-menu-service-item-renderer:has([d^="M16.25 2A6.7 6.7 0 0012 3.509 6.75 6.75"])
+    youtube.com##ytd-menu-service-item-renderer:has([d^="M16.25 2A6.7 6.7 0 0012 3.509 6.75 6.75"])
     ! YT - Кнопки под плеером - Еще: Клип
-    [www.youtube.com](https://www.youtube.com)##ytd-menu-service-item-renderer:has([d^="M6 2.002a4 4 0 102.03 7.445L10.586"])
+    youtube.com##ytd-menu-service-item-renderer:has([d^="M6 2.002a4 4 0 102.03 7.445L10.586"])
     ! YT - Кнопки под плеером - Еще: Скачать
-    [www.youtube.com](https://www.youtube.com)##ytd-menu-service-item-download-renderer
+    youtube.com##ytd-menu-service-item-download-renderer
     ! YT - Кнопки под плеером - Еще: Пожаловаться
-    [www.youtube.com](https://www.youtube.com)##ytd-menu-service-item-renderer:has([d^="m4 2.999-.146.073A1.55 1.55 0 003 4.454v16.545a1"])
+    youtube.com##ytd-menu-service-item-renderer:has([d^="m4 2.999-.146.073A1.55 1.55 0 003 4.454v16.545a1"])
 
 ```
 
