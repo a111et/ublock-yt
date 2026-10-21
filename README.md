@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/a111et/ublock-yt/blob/main/README-RU"><img src="https://img.shields.io/badge/Russian-README-blue?style=for-the-badge&logo=github" alt="English README"></a>
+  <a href="https://github.com/a111et/ublock-yt/blob/main/README-RU.md"><img src="https://img.shields.io/badge/Russian-README-blue?style=for-the-badge&logo=github" alt="English README"></a>
   <a href="https://github.com/a111et/ublock-yt/stargazers"><img src="https://img.shields.io/github/stars/a111et/ublock-yt?style=for-the-badge&logo=github&color=333" alt="Звезды"></a>
   <a href="https://github.com/a111et/ublock-yt/issues"><img src="https://img.shields.io/github/issues/a111et/ublock-yt?style=for-the-badge&logo=github&color=666" alt="Проблемы"></a>
   <a href="https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/a111et/ublock-yt/refs/heads/main/ublock-YT-Clinin.txt&title=uBlock-YT%20Filters"><img src="https://img.shields.io/badge/Subscribe-Filter%20List-red?style=for-the-badge&logo=ublockorigin" alt="Подписаться"></a>
