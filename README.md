@@ -5,9 +5,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/a111et/ublock-yt/stargazers"><img src="https://img.shields.io/github/stars/a111et/ublock-yt?style=for-the-badge&logo=github&color=333" alt="Stars"></a>
-  <a href="https://github.com/a111et/ublock-yt/issues"><img src="https://img.shields.io/github/issues/a111et/ublock-yt?style=for-the-badge&logo=github&color=666" alt="Issues"></a>
-  <a href="https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/a111et/ublock-yt/refs/heads/main/ublock-YT-Clinin.txt&title=uBlock-YT%20Filters"><img src="https://img.shields.io/badge/Subscribe-Filter%20List-red?style=for-the-badge&logo=ublockorigin" alt="Subscribe"></a>
+  <a href="https://github.com/a111et/ublock-yt/blob/main/README-RU.md"><img src="https://img.shields.io/badge/Russian-README-blue?style=for-the-badge&logo=github" alt="English README"></a>
+  <a href="https://github.com/a111et/ublock-yt/stargazers"><img src="https://img.shields.io/github/stars/a111et/ublock-yt?style=for-the-badge&logo=github&color=333" alt="Звезды"></a>
+  <a href="https://github.com/a111et/ublock-yt/issues"><img src="https://img.shields.io/github/issues/a111et/ublock-yt?style=for-the-badge&logo=github&color=666" alt="Проблемы"></a>
+  <a href="https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/a111et/ublock-yt/refs/heads/main/ublock-YT-Clinin.txt&title=uBlock-YT%20Filters"><img src="https://img.shields.io/badge/Subscribe-Filter%20List-red?style=for-the-badge&logo=ublockorigin" alt="Подписаться"></a>
 </p>
 
 ---
@@ -127,16 +128,6 @@ Cleans up the cluttered row of buttons beneath the video player (Join, Thanks, C
 ![alt text](info/a3.png)
 
 ```adblock
-! YT - Below the Player Buttons - Join
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata #sponsor-button
-! YT - Below the Player Buttons - Like/Dislike
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata .ytSegmentedLikeDislikeButtonViewModelHost
-    ! YT - Below the Player Buttons - Like
-    [www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata .ytLikeButtonViewModelHost
-        ! YT - Below the Player Buttons - Like Count
-        [www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata .ytLikeButtonViewModelHost .yt-spec-button-shape-next__button-text-content
-    ! YT - Below the Player Buttons - Dislike
-    [www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata .ytDislikeButtonViewModelHost
 ! YT - Below the Player Buttons - Ask
 [www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Ask"])
 ! YT - Below the Player Buttons - Thanks
@@ -147,8 +138,6 @@ Cleans up the cluttered row of buttons beneath the video player (Join, Thanks, C
 [www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata ytd-download-button-renderer
 ! YT - Below the Player Buttons - Clip
 [www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Clip"])
-! YT - Below the Player Buttons - Save
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Save"])
 ! YT - Below the Player Buttons - More
 [www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata [aria-label="More actions"]
     ! YT - Below the Player Buttons - More: Ask
@@ -157,8 +146,6 @@ Cleans up the cluttered row of buttons beneath the video player (Join, Thanks, C
     [www.youtube.com](https://www.youtube.com)##ytd-menu-service-item-renderer:has([d^="M16.25 2A6.7 6.7 0 0012 3.509 6.75 6.75"])
     ! YT - Below the Player Buttons - More: Clip
     [www.youtube.com](https://www.youtube.com)##ytd-menu-service-item-renderer:has([d^="M6 2.002a4 4 0 102.03 7.445L10.586"])
-    ! YT - Below the Player Buttons - More: Save
-    [www.youtube.com](https://www.youtube.com)##ytd-menu-service-item-renderer:has([d^="M19 2H5a2 2 0 00-2 2v16.887c0 1.266 1.382"])
     ! YT - Below the Player Buttons - More: Download
     [www.youtube.com](https://www.youtube.com)##ytd-menu-service-item-download-renderer
     ! YT - Below the Player Buttons - More: Report
