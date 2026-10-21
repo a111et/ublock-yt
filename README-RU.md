@@ -121,11 +121,9 @@ youtube.com##ytd-browse[page-subtype="home"] ytd-rich-item-renderer[is-post]
 
 ### 5. Очистка интерфейса (Чистый плеер)
 
-Очищает перегруженный ряд кнопок под видеоплеером («Спонсорство»/«Спросить», «Спасибо», «Клип», «Скачать» и т. д.), оставляя фокус исключительно на видеоконтенте.
+Очищает перегруженный ряд кнопок под видеоплеером («Спонсорство», «Спасибо», «Клип», «Скачать» и т. д.), оставляя фокус исключительно на видеоконтенте.
 
 ```adblock
-! YT - Кнопки под плеером - Спросить
-youtube.com###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Ask"])
 ! YT - Кнопки под плеером - Спасибо
 youtube.com###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Thanks"])
 ! YT - Кнопки под плеером - Поделиться
@@ -136,8 +134,6 @@ youtube.com###top-row.ytd-watch-metadata ytd-download-button-renderer
 youtube.com###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Clip"])
 ! YT - Кнопки под плеером - Еще
 youtube.com###top-row.ytd-watch-metadata [aria-label="More actions"]
-    ! YT - Кнопки под плеером - Еще: Спросить
-    youtube.com##ytd-menu-service-item-renderer:has([d^="M480-80q0-83-31.5-156T363-363q-54-54-127-85.5T80-480q83"])
     ! YT - Кнопки под плеером - Еще: Спасибо
     youtube.com##ytd-menu-service-item-renderer:has([d^="M16.25 2A6.7 6.7 0 0012 3.509 6.75 6.75"])
     ! YT - Кнопки под плеером - Еще: Клип
