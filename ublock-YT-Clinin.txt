@@ -58,20 +58,6 @@ www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer:has(y
 ! YT Homepage - Hide Posts
 www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-item-renderer[is-post]
 
-! === Clean Video Player UI (Below Player Buttons) ===
-! YT - Below the Player Buttons - Join
-www.youtube.com###top-row.ytd-watch-metadata #sponsor-button
-! YT - Below the Player Buttons - Download
-www.youtube.com###top-row.ytd-watch-metadata ytd-download-button-renderer
-! YT - Below the Player Buttons - Clip
-www.youtube.com###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Clip"])
-! YT - Below the Player Buttons - More: Clip
-www.youtube.com##ytd-menu-service-item-renderer:has([d^="M6 2.002a4 4 0 102.03 7.445L10.586"])
-! YT - Below the Player Buttons - More: Download
-www.youtube.com##ytd-menu-service-item-download-renderer
-! YT - Below the Player Buttons - More: Report
-www.youtube.com##ytd-menu-service-item-renderer:has([d^="m4 2.999-.146.073A1.55 1.55 0 003 4.454v16.545a1"])
-
 ! === Clean Search Results (Videos, Channels, Playlists Only) ===
 ! YT Search - keep only videos (no shorts)
 youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-renderer,yt-showing-results-for-renderer,[icon-name="promo-full-height:EMPTY_SEARCH"]),ytd-video-renderer:has([aria-label="Shorts"])),ytd-secondary-search-container-renderer
