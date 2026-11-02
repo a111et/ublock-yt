@@ -71,18 +71,10 @@ www.youtube.com###top-row.ytd-watch-metadata yt-button-view-model:has([aria-labe
 www.youtube.com###top-row.ytd-watch-metadata ytd-download-button-renderer
 ! YT - Below the Player Buttons - Clip
 www.youtube.com###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Clip"])
-! YT - Below the Player Buttons - Save
-www.youtube.com###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Save"])
-! YT - Below the Player Buttons - More
-www.youtube.com###top-row.ytd-watch-metadata [aria-label="More actions"]
-! YT - Below the Player Buttons - More: Ask
-www.youtube.com##ytd-menu-service-item-renderer:has([d^="M480-80q0-83-31.5-156T363-363q-54-54-127-85.5T80-480q83"])
 ! YT - Below the Player Buttons - More: Thanks
 www.youtube.com##ytd-menu-service-item-renderer:has([d^="M16.25 2A6.7 6.7 0 0012 3.509 6.75 6.75"])
 ! YT - Below the Player Buttons - More: Clip
 www.youtube.com##ytd-menu-service-item-renderer:has([d^="M6 2.002a4 4 0 102.03 7.445L10.586"])
-! YT - Below the Player Buttons - More: Save
-www.youtube.com##ytd-menu-service-item-renderer:has([d^="M19 2H5a2 2 0 00-2 2v16.887c0 1.266 1.382"])
 ! YT - Below the Player Buttons - More: Download
 www.youtube.com##ytd-menu-service-item-download-renderer
 ! YT - Below the Player Buttons - More: Report
@@ -97,3 +89,16 @@ youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-r
 
 ! YT Search - keep only videos (no shorts), channels and playlists
 youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-renderer,ytd-channel-renderer,ytd-playlist-renderer,yt-lockup-view-model,yt-showing-results-for-renderer,[icon-name="promo-full-height:EMPTY_SEARCH"]),ytd-video-renderer:has([aria-label="Shorts"])),ytd-secondary-search-container-renderer
+
+
+! YT Home - Hide Mixes
+youtube.com##ytd-rich-item-renderer:has([href*="start_radio=1"])
+! YT Sidebar - Hide Mixes
+youtube.com##ytd-compact-radio-renderer, :is(#related yt-lockup-view-model,ytd-compact-video-renderer):has([href*="&start_radio=1"])
+! YT Search- Hide Mixes
+youtube.com##ytd-radio-renderer, :is(ytd-search yt-lockup-view-model,ytd-video-renderer[is-search]):has([href*="&start_radio=1"][aria-haspopup])
+! YT Player - Hide Mixes in Video End Cards
+youtube.com##.ytp-videowall-still[data-is-mix="true"]
+
+! YT Sidebar - Hide "YouTube" (Music) playlists
+youtube.com##ytd-compact-playlist-renderer:has([title^="YouTube"])
