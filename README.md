@@ -75,27 +75,29 @@ youtube.com##ytd-rich-section-renderer.style-scope.ytd-rich-grid-renderer
 Completely removes YouTube Shorts from the Desktop and Mobile interfaces, including the sidebar, homepage shelves, subscriptions, search results, and watch history.
 
 ```adblock
+! === Shorts Removal (Desktop) ===
 ! YT - Homepage and Subscriptions (Grid View) - Hide the Shorts section
 youtube.com##[is-shorts]
 ! YT - Menu - Hide the Shorts button
-[www.youtube.com](https://www.youtube.com)###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
+www.youtube.com###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
 ! YT - Search - Hide Shorts
-[www.youtube.com](https://www.youtube.com)##ytd-search ytd-video-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
+www.youtube.com##ytd-search ytd-video-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
 ! YT - Search, Channels, Subscriptions (List View) and Sidebar/Below Player Recommendations - Hide the Shorts sections
-[www.youtube.com](https://www.youtube.com)##ytd-reel-shelf-renderer
+www.youtube.com##ytd-reel-shelf-renderer
 ! YT - Channels - Hide the Shorts tab
-[www.youtube.com](https://www.youtube.com)##[tab-title="Shorts"]
+www.youtube.com##[tab-title="Shorts"]
 ! YT - Subscriptions - Hide Shorts - Grid View
-[www.youtube.com](https://www.youtube.com)##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
 ! YT - Subscriptions - Hide Shorts - List View
-[www.youtube.com](https://www.youtube.com)##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
 ! YT - Subscriptions - New Layout - Hide Shorts
-[www.youtube.com](https://www.youtube.com)##ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has([overlay-style="SHORTS"],[href^="/shorts/"])
 ! YT - Sidebar - Hide Shorts
-[www.youtube.com](https://www.youtube.com)###related :is(ytd-compact-video-renderer,yt-lockup-view-model):has([overlay-style="SHORTS"],[href^="/shorts/"])
+www.youtube.com###related :is(ytd-compact-video-renderer,yt-lockup-view-model):has([overlay-style="SHORTS"],[href^="/shorts/"])
 ! YT - History - Hide Shorts
-[www.youtube.com](https://www.youtube.com)##ytd-item-section-renderer[page-subtype]:has(>#contents>[is-history]>#dismissible>ytd-thumbnail>#thumbnail[href^="/shorts/"])
+www.youtube.com##ytd-item-section-renderer[page-subtype]:has(>#contents>[is-history]>#dismissible>ytd-thumbnail>#thumbnail[href^="/shorts/"])
 
+! === Shorts Removal (Mobile) ===
 ! YT Mobile - Hide the Shorts Menu button
 m.youtube.com##ytm-pivot-bar-item-renderer:has(>.pivot-shorts)
 ! YT Mobile - Hide the Shorts sections
@@ -106,7 +108,6 @@ m.youtube.com##ytm-search ytm-video-with-context-renderer:has([href^="/shorts/"]
 m.youtube.com##[tab-title="Shorts"]
 ! YT Mobile - History - Hide Shorts
 m.youtube.com##[tab-identifier="FEhistory"] ytm-compact-video-renderer:has(>div>a[href^="/shorts/"])
-
 ```
 
 ### 4. Hide Community Posts on Homepage
@@ -114,50 +115,19 @@ m.youtube.com##[tab-identifier="FEhistory"] ytm-compact-video-renderer:has(>div>
 Blocks text and image community posts from crowding your main video feed.
 
 ```adblock
+! === Hide Community Posts ===
 ! YT Homepage - Hide the Posts Section
-[www.youtube.com](https://www.youtube.com)##ytd-browse[page-subtype="home"] ytd-rich-section-renderer:has(ytd-rich-item-renderer[is-post])
+www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer:has(ytd-rich-item-renderer[is-post])
 ! YT Homepage - Hide Posts
-[www.youtube.com](https://www.youtube.com)##ytd-browse[page-subtype="home"] ytd-rich-item-renderer[is-post]
-
+www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-item-renderer[is-post]
 ```
 
-### 5. Interface De-cluttering (Clean Player UI)
-
-Cleans up the cluttered row of buttons beneath the video player (Join, Thanks, Clip, Download, etc.) keeping the focus purely on the video content.
-
-![alt text](info/a3.png)
-
-```adblock
-! YT - Below the Player Buttons - Ask
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Ask"])
-! YT - Below the Player Buttons - Thanks
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Thanks"])
-! YT - Below the Player Buttons - Share
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Share"])
-! YT - Below the Player Buttons - Download
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata ytd-download-button-renderer
-! YT - Below the Player Buttons - Clip
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata yt-button-view-model:has([aria-label="Clip"])
-! YT - Below the Player Buttons - More
-[www.youtube.com](https://www.youtube.com)###top-row.ytd-watch-metadata [aria-label="More actions"]
-    ! YT - Below the Player Buttons - More: Ask
-    [www.youtube.com](https://www.youtube.com)##ytd-menu-service-item-renderer:has([d^="M480-80q0-83-31.5-156T363-363q-54-54-127-85.5T80-480q83"])
-    ! YT - Below the Player Buttons - More: Thanks
-    [www.youtube.com](https://www.youtube.com)##ytd-menu-service-item-renderer:has([d^="M16.25 2A6.7 6.7 0 0012 3.509 6.75 6.75"])
-    ! YT - Below the Player Buttons - More: Clip
-    [www.youtube.com](https://www.youtube.com)##ytd-menu-service-item-renderer:has([d^="M6 2.002a4 4 0 102.03 7.445L10.586"])
-    ! YT - Below the Player Buttons - More: Download
-    [www.youtube.com](https://www.youtube.com)##ytd-menu-service-item-download-renderer
-    ! YT - Below the Player Buttons - More: Report
-    [www.youtube.com](https://www.youtube.com)##ytd-menu-service-item-renderer:has([d^="m4 2.999-.146.073A1.55 1.55 0 003 4.454v16.545a1"])
-
-```
-
-### 6. Purged Search Results
+### 5. Purged Search Results
 
 Restores the search results page to a classic look, showing **only actual videos, channels, and playlists** while hiding suggested shelves, "people also watched", and other algorithm traps.
 
 ```adblock
+! === Clean Search Results (Videos, Channels, Playlists Only) ===
 ! YT Search - keep only videos (no shorts)
 youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-renderer,yt-showing-results-for-renderer,[icon-name="promo-full-height:EMPTY_SEARCH"]),ytd-video-renderer:has([aria-label="Shorts"])),ytd-secondary-search-container-renderer
 
@@ -166,8 +136,26 @@ youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-r
 
 ! YT Search - keep only videos (no shorts), channels and playlists
 youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-renderer,ytd-channel-renderer,ytd-playlist-renderer,yt-lockup-view-model,yt-showing-results-for-renderer,[icon-name="promo-full-height:EMPTY_SEARCH"]),ytd-video-renderer:has([aria-label="Shorts"])),ytd-secondary-search-container-renderer
-
 ```
+
+### 6. Hide Mixes
+
+Hide Mixes playlists recommendation
+
+```adblock
+! YT Home - Hide Mixes
+youtube.com##ytd-rich-item-renderer:has([href*="start_radio=1"])
+! YT Sidebar - Hide Mixes
+youtube.com##ytd-compact-radio-renderer, :is(#related yt-lockup-view-model,ytd-compact-video-renderer):has([href*="&start_radio=1"])
+! YT Search- Hide Mixes
+youtube.com##ytd-radio-renderer, :is(ytd-search yt-lockup-view-model,ytd-video-renderer[is-search]):has([href*="&start_radio=1"][aria-haspopup])
+! YT Player - Hide Mixes in Video End Cards
+youtube.com##.ytp-videowall-still[data-is-mix="true"]
+
+! YT Sidebar - Hide "YouTube" (Music) playlists
+youtube.com##ytd-compact-playlist-renderer:has([title^="YouTube"])
+```
+
 
 ---
 
